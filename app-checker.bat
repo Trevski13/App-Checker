@@ -12,6 +12,23 @@ endlocal & exit /b
 ::                                  -- image_name	[in]	- exe name to terminate/and check for successful run
 setlocal
 rem TODO: Finish this function
+
+set file=%~1
+set title=%~2
+set image_name=%~3
+
+rem Running file cmd.exe
+start "" %file%
+
+rem Check if image_name is running by name (hint: google)
+
+
+
+rem Check if title exists
+call :check_title %title%
+
+rem set result
+
 endlocal & exit /b %result%
 
 :check_title title -- checks if a title exists
@@ -19,3 +36,4 @@ endlocal & exit /b %result%
 setlocal
 rem TODO: Finish this function
 endlocal & exit /b %result%
+
